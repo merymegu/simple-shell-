@@ -1,29 +1,47 @@
-.TH man 1 " 28   fabruary2024" "1.0 Release version" "simple_shell man page"
+.TH SHELL 1 "February 28, 2024"  "alx-" "0x16"
+ "1.01" "C - simple_shell - man page"
 
 .SH NAME
-.B simple_shell man page
+.B simple_shell \- simple UNIX command interpreter made in C 
 
 .SH SYNOPSIS
-.B ./hsh
+$ /hsh [options] [file]
 
 .SH DESCRIPTION
-simple_shell tries to reproduce the functionalities of the original shell like exit, EOF and much more
+Simple_Shell is a command language interpreter that executes commands read from the standard input.
+Clone of sh
 
-.SH BUILTINS
-.B env
-- prints enviroment
+.SH Return Value
 
-.B exit
-- exit the shell
+Always returns the status of the previously executed command ( 0 if no command was executed) , number means exit fail codes
 
-.SH SEE ALSO
-.B The Shell itself
+.SH PATH
+
+looks in PATH env variable for executable program file location.
+
+.SH 
+
+.B Invocation
+.in +2n
+simple_shell can be invoked both interactively and non-interactively.
+If invoked with standard input not connected to a terminal, it reads and executes received commands in order.
+
+If simple_shell is invoked with standard input connected to a terminal, an interactive shell is opened.
+When executing interactively, the simpl_shell displays the prompt \"($) "\ when it is ready to read a command.
+
+.SH OPTIONS
+.B simple_shell
+Command options will be typed after the main command followed by a space and a
+ '-' symbol.
+
+.SH EXAMPLE
+
+./hsh [command] [options]
+$ ls -l
+
 
 .SH BUGS
-.B NO BUGS :)
+not many found.
 
 .SH AUTHOR
-Clara Berriel, Pichu Otegui y Miguel Pacheco - Holberton School Cohort 14
-
-.SH COPYRIGHT
-meryem guernoun
+Meryem Guernoun.
